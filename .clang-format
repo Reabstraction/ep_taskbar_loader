@@ -1,0 +1,5 @@
+IndentWidth: 4
+ColumnLimit: 120
+AlwaysBreakBeforeMultilineStrings: true
+PenaltyReturnTypeOnItsOwnLine: 9999
+BreakAfterReturnType: Automatic
