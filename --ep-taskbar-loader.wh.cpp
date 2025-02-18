@@ -2,7 +2,7 @@
 // @id              --ep-taskbar-loader
 // @name            ep_taskbar loader
 // @description     Loads ep_taskbar
-// @version         1.6
+// @version         1.7
 // @author          Reabstraction
 // @include         explorer.exe
 // @compilerOptions -lcomdlg32 -lole32
@@ -343,6 +343,8 @@ BOOL Wh_ModInit() {
         DWORD id;
         GetWindowThreadProcessId(hwnd, &id);
         shouldBecause = id == GetCurrentProcessId();
+        if (!shouldBecause)
+            return TRUE;
     }
 
     PCWSTR installPath = Wh_GetStringSetting(L"install_path");
